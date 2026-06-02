@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EduChile Red Nacional | Tu Sala de Clases Segura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary: #005A9C; /* Azul de confianza */
+            --secondary: #FF9F1C; /* Naranja cálido y motivador */
+            --accent: #2EC4B6; /* Turquesa suave */
+            --bg-light: #F4F8FB;
+            --text-main: #334155;
+            --text-light: #64748B;
+            --white: #FFFFFF;
+            --shadow-soft: 0 8px 30px rgba(0,0,0,0.05);
+            --shadow-hover: 0 15px 35px rgba(0,90,156,0.15);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        /* --- HEADER NAVBAR --- */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: var(--white);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.6rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i { color: var(--secondary); }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            background: transparent;
+            color: var(--text-main);
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .nav-btn:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn.login-btn {
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 25px;
+            padding: 8px 24px;
+        }
+        
+        .nav-btn.login-btn:hover {
+            background: #E88E14;
+            transform: scale(1.05);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(to right, rgba(244, 248, 251, 0.95), rgba(244, 248, 251, 0.7)), 
+                        url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: 60px; /* offset header */
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(46, 196, 182, 0.15);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Nunito', sans-serif;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #004275;
+            box-shadow: 0 10px 20px rgba(0, 90, 156, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+        }
+
+        /* --- LAYOUT CONTAINER --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- PROPÓSITO / MISIÓN --- */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .mission-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .mission-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(46, 196, 182, 0.1);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        /* --- PORTALES --- */
+        .portales-wrapper {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 80px;
+        }
+
+        .portal-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 10px;
+        }
+
+        .portal-tab {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 10px 20px;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -13px;
+            transition: all 0.3s;
+        }
+
+        .portal-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .portal-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .portal-text {
+            flex: 1;
+        }
+
+        .portal-img {
+            flex: 1;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+        }
+
+        /* --- ASIGNATURAS (RAMOS) --- */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .course-color-bar {
+            height: 6px;
+        }
+
+        .course-content {
+            padding: 30px;
+        }
+
+        .course-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .course-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* --- APOYO Y CONVIVENCIA --- */
+        .support-box {
+            background: linear-gradient(135deg, #FF9F1C, #F47920);
+            border-radius: 24px;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-box h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .support-box p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .support-btn {
+            background: white;
+            color: #FF9F1C;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .support-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- INFORME (REVISTA) --- */
+        .revista-wrapper {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 80px;
+            border: 1px solid #E2E8F0;
+        }
+        
+        .revista-container {
+            width: 100%;
+            height: 500px;
+        }
+
+        .swiper-slide {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-top: 6px solid var(--accent);
+        }
+
+        /* --- CONTACT --- */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
+            background: var(--bg-light);
+        }
+
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+
+        /* --- LIBRARY CONTROLS --- */
+        .library-controls {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .library-search, .library-select {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg-light);
+        }
+
+        .library-search:focus, .library-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+        }
+
+        .material-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.2s;
+        }
+
+        .material-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .material-badge {
+            display: inline-block;
+            background: #E2E8F0;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: #E2E8F0;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* Media Queries */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .mission-grid { grid-template-columns: 1fr; }
+            .portal-content { flex-direction: column; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> EduChile Red Nacional
+        </div>
+        <nav>
+            <button class="nav-btn" onclick="ir('mision')">Nuestra Misión</button>
+            <button class="nav-btn" onclick="ir('portales')">Portales</button>
+            <button class="nav-btn" onclick="ir('ramos')">Asignaturas</button>
+            <button class="nav-btn" onclick="ir('biblioteca')">Biblioteca</button>
+            <button class="nav-btn" onclick="ir('apoyo')">Apoyo Escolar</button>
+            <button class="nav-btn" onclick="ir('informe')">Toolkit</button>
+            <button class="nav-btn login-btn" onclick="login()"><i class="fa-regular fa-user"></i> Ingresar al Aula</button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="badge"><i class="fa-solid fa-heart"></i> Por un Chile sin deserción escolar</div>
+            <h1>Tu sala de clases, donde te sientas seguro.</h1>
+            <p>Conectamos a estudiantes y colegios de todo Chile mediante un sistema de clases online inclusivo. Combatimos el bullying, acortamos las distancias y eliminamos las barreras económicas para que ningún niño se quede sin estudiar.</p>
+            <div>
+                <button class="btn-primary" onclick="ir('contacto')">Inscribe a tu Colegio</button>
+                <button class="btn-secondary" onclick="ir('mision')">Saber más</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- MISIÓN Y PROBLEMA -->
+        <div class="section-header" id="mision">
+            <h2>Por qué nace EduChile</h2>
+            <p>La deserción escolar es un problema creciente. Muchos jóvenes evitan ir a clases por temor al acoso, por falta de recursos para el transporte, o por encontrarse en zonas extremas. Nosotros traemos el colegio a su hogar de forma segura.</p>
+        </div>
+
+        <div class="mission-grid">
+            <div class="mission-card">
+                <div class="mission-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Entorno Seguro Libre de Bullying</h3>
+                <p style="color: var(--text-light); margin-top: 15px; font-size:0.95rem;">
+                    El aula virtual elimina las barreras físicas y sociales, protegiendo la salud mental de los estudiantes y permitiéndoles enfocarse 100% en aprender en paz.
+                </p>
+            </div>
+            <div class="mission-card">
+                <div class="mission-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                <h3>Ahorro y Accesibilidad</h3>
+                <p style="color: var(--text-light); margin-top: 15px; font-size:0.95rem;">
+                    Sin costos de uniformes, traslados, ni alimentación externa. La educación de calidad llega directo al computador o celular de cada familia chilena.
+                </p>
+            </div>
+            <div class="mission-card">
+                <div class="mission-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>Alcance Nacional Sin Límites</h3>
+                <p style="color: var(--text-light); margin-top: 15px; font-size:0.95rem;">
+                    Desde Arica a Punta Arenas, sin importar qué tan alejado esté tu hogar, puedes asistir a clases en vivo y contactar con los mejores profesores del país.
+                </p>
+            </div>
+        </div>
+
+        <!-- PORTALES -->
+        <div class="section-header" id="portales">
+            <h2>Conectando a toda la comunidad</h2>
+            <p>Herramientas especializadas para que alumnos, familias y colegios trabajen juntos.</p>
+        </div>
+
+        <div class="portales-wrapper">
+            <div class="portal-tabs">
+                <div class="portal-tab active" id="tab-alumno" onclick="cambiarPortal('alumno')">Portal Alumno</div>
+                <div class="portal-tab" id="tab-apoderado" onclick="cambiarPortal('apoderado')">Portal Apoderado</div>
+                <div class="portal-tab" id="tab-colegio" onclick="cambiarPortal('colegio')">Portal Colegio</div>
+            </div>
+
+            <!-- Contenido dinámico por JS (Simplificado para el ejemplo) -->
+            <div class="portal-content" id="portal-content">
+                <div class="portal-text">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Tu espacio personal de aprendizaje</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.6;">
+                        Accede a tus clases en vivo, revisa grabaciones de días anteriores y entrega tus tareas sin estrés. Aquí llevas tu propio ritmo, y si necesitas ayuda, tu profesor está a un clic de distancia.
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Asistencia a clases por videollamada segura.</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Material de estudio digital gratuito.</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Foro de dudas respetuoso y moderado.</li>
+                    </ul>
+                </div>
+                <div class="portal-img" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <!-- ASIGNATURAS (RAMOS) -->
+        <div class="section-header" id="ramos">
+            <h2>Asignaturas del Currículum Nacional</h2>
+            <p>Contenidos alineados con los objetivos del MINEDUC para asegurar la validación de estudios.</p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #E63946;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-book" style="font-size: 2rem; color: #E63946; margin-bottom: 15px;"></i>
+                    <h3>Lenguaje y Comunicación</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-users"></i> Básico y Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">Fomento de la lectura, comprensión de textos y expresión escrita. Evaluaciones adaptadas a cada nivel.</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #457B9D;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-calculator" style="font-size: 2rem; color: #457B9D; margin-bottom: 15px;"></i>
+                    <h3>Matemáticas</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-users"></i> Básico y Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">Resolución de problemas mediante metodologías visuales y guías interactivas paso a paso.</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #2A9D8F;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-flask" style="font-size: 2rem; color: #2A9D8F; margin-bottom: 15px;"></i>
+                    <h3>Ciencias Naturales</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-users"></i> Básico y Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">Laboratorios virtuales interactivos para entender el mundo natural sin necesidad de materiales físicos.</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #E9C46A;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-landmark" style="font-size: 2rem; color: #E9C46A; margin-bottom: 15px;"></i>
+                    <h3>Historia y Geografía</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-users"></i> Básico y Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">Conociendo nuestro país y la sociedad a través de material audiovisual y debates moderados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIBLIOTECA NACIONAL DE MATERIALES -->
+        <div class="section-header" id="biblioteca">
+            <h2>Biblioteca Nacional de Materiales</h2>
+            <p>Busca tus guías de estudio, videos y apuntes filtrando por tu nivel escolar.</p>
+        </div>
+
+        <div class="library-controls">
+            <select class="library-select" id="nivelSelect" onchange="filtrarMateriales()">
+                <option value="todos">Todos los cursos</option>
+                <optgroup label="Educación Básica">
+                    <option value="1 basico">1° Básico</option>
+                    <option value="2 basico">2° Básico</option>
+                    <option value="3 basico">3° Básico</option>
+                    <option value="4 basico">4° Básico</option>
+                    <option value="5 basico">5° Básico</option>
+                    <option value="6 basico">6° Básico</option>
+                    <option value="7 basico">7° Básico</option>
+                    <option value="8 basico">8° Básico</option>
+                </optgroup>
+                <optgroup label="Educación Media">
+                    <option value="1 medio">1° Medio</option>
+                    <option value="2 medio">2° Medio</option>
+                    <option value="3 medio">3° Medio</option>
+                    <option value="4 medio">4° Medio</option>
+                </optgroup>
+            </select>
+            <input type="text" class="library-search" id="searchInput" placeholder="Buscar materia o tema (Ej: Fracciones, Célula, Guerra Fria)..." onkeyup="filtrarMateriales()">
+        </div>
+
+        <div class="courses-grid" id="materialsGrid" style="margin-bottom: 80px;">
+            <!-- El contenido dinámico se generará aquí con JS -->
+        </div>
+
+        <!-- APOYO PSICOLÓGICO -->
+        <div class="support-box" id="apoyo">
+            <h2>Portal de Apoyo y Convivencia Escolar</h2>
+            <p>
+                Sabemos que estudiar desde casa a veces puede sentirse solitario, y que muchos alumnos llegan aquí buscando un refugio del acoso escolar. Nuestro equipo de psicólogos y orientadores está disponible para ti.
+            </p>
+            <button class="support-btn" onclick="alert('Conectando de forma confidencial con un orientador escolar...')">
+                <i class="fa-solid fa-hands-holding-child"></i> Solicitar Charla Confidencial
+            </button>
+            <p style="margin-top:20px; font-size:0.9rem; opacity:0.9;">Tu bienestar emocional es tan importante como tus notas.</p>
+        </div>
+
+        <!-- INFORME / REVISTA (TOOLKIT) -->
+        <div class="section-header" id="informe">
+            <h2>Metodología y Retención Escolar</h2>
+            <p>Documentación técnica para colegios sobre cómo implementar nuestro modelo de retención.</p>
+        </div>
+
+        <div class="revista-wrapper">
+            <!-- Imagen subida por el usuario (referencia) -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Índice del Toolkit Metodológico</h3>
+                <!-- Aquí se muestra la imagen solicitada por el usuario -->
+                <img src="lista_toolkit.png" alt="Lista de archivos del Toolkit" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #E2E8F0;">
+                <p style="color: var(--text-light); margin-top: 10px; font-size: 0.9rem;">Documentos oficiales del programa de integración</p>
+            </div>
+
+            <div class="revista-container">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Slide 0 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #FF9F1C 0%, #FFBF69 100%);">
+                            <span style="color:rgba(255,255,255,0.8); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 0</span>
+                            <i class="fa-solid fa-lightbulb" style="font-size: 3rem; color: white; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Lienzo de Lluvia de Ideas</h2>
+                            <p style="color:white; font-size:0.95rem;">Plantilla visual para generar alternativas creativas y resolver la problemática detectada sin juzgar la viabilidad inicial.</p>
+                            <button class="support-btn" style="margin-top:auto; width:100%; font-size:0.9rem;" onclick="alert('Abriendo lienzo...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #2EC4B6 0%, #CBF3F0 100%);">
+                            <span style="color:rgba(0,0,0,0.5); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 1</span>
+                            <i class="fa-solid fa-clipboard-user" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                            <h2 style="color:var(--primary); font-size:1.8rem;">Preparación de Entrevista</h2>
+                            <p style="color:var(--text-main); font-size:0.95rem;">Define objetivos, perfil de usuarios en riesgo y planifica el acercamiento logístico y emocional para la investigación.</p>
+                            <button class="btn-primary" style="margin-top:auto; width:100%; font-size:0.9rem; justify-content:center;" onclick="alert('Abriendo documento...')">Ver Documento</button>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #005A9C 0%, #003F70 100%);">
+                            <span style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 2</span>
+                            <i class="fa-solid fa-comments" style="font-size: 3rem; color: #2EC4B6; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem;">Pauta de Entrevista</h2>
+                            <p style="color:white; font-size:0.95rem;">Estructura de cuestionamiento profundo para descubrir los verdaderos dolores, miedos y necesidades de la familia y el alumno.</p>
+                            <button class="btn-secondary" style="margin-top:auto; width:100%; font-size:0.9rem;" onclick="alert('Abriendo pauta...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #E63946 0%, #F4A261 100%);">
+                            <span style="color:rgba(255,255,255,0.8); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 3</span>
+                            <i class="fa-solid fa-map" style="font-size: 3rem; color: white; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">Mapa de Priorización</h2>
+                            <p style="color:white; font-size:0.95rem;">Herramienta para clasificar los hallazgos según su impacto emocional en el alumno y el esfuerzo requerido para solucionarlo.</p>
+                            <button class="support-btn" style="margin-top:auto; width:100%; font-size:0.9rem; color:#E63946;" onclick="alert('Abriendo mapa...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #F4F8FB 0%, #E2E8F0 100%);">
+                            <span style="color:var(--text-light); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 4</span>
+                            <i class="fa-solid fa-layer-group" style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h2 style="color:var(--primary); font-size:1.8rem;">Matriz de Categorización</h2>
+                            <p style="color:var(--text-main); font-size:0.95rem;">Plantilla para agrupar las citas y observaciones cualitativas de las entrevistas y transformarlas en "Insights" accionables.</p>
+                            <button class="btn-primary" style="margin-top:auto; width:100%; font-size:0.9rem; justify-content:center;" onclick="alert('Abriendo matriz...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #8338EC 0%, #3A0CA3 100%);">
+                            <span style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 5</span>
+                            <i class="fa-solid fa-arrows-rotate" style="font-size: 3rem; color: #F72585; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem;">Redefinición del Desafío</h2>
+                            <p style="color:white; font-size:0.95rem;">Transforma los problemas encontrados en oportunidades de diseño utilizando la metodología "¿Cómo podríamos nosotros...?".</p>
+                            <button class="btn-secondary" style="margin-top:auto; width:100%; font-size:0.9rem; color:#8338EC;" onclick="alert('Abriendo documento...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #2A9D8F 0%, #264653 100%);">
+                            <span style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 6</span>
+                            <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 3rem; color: #E9C46A; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem;">Ficha de Antecedentes</h2>
+                            <p style="color:white; font-size:0.95rem;">Recopilación de investigaciones previas, contexto psicosocial, competencia y casos de éxito de educación a distancia.</p>
+                            <button class="support-btn" style="margin-top:auto; width:100%; font-size:0.9rem; color:#2A9D8F;" onclick="alert('Abriendo ficha...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #E9C46A 0%, #F4A261 100%);">
+                            <span style="color:rgba(0,0,0,0.5); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 7</span>
+                            <i class="fa-solid fa-list-check" style="font-size: 3rem; color: #264653; margin-bottom: 20px;"></i>
+                            <h2 style="color:#264653; font-size:1.8rem;">Tabla de Requerimientos</h2>
+                            <p style="color:var(--text-main); font-size:0.95rem;">Traducción técnica de las necesidades sociales en características funcionales y emocionales para el sistema educativo.</p>
+                            <button class="btn-primary" style="margin-top:auto; width:100%; font-size:0.9rem; justify-content:center;" onclick="alert('Abriendo tabla...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #FF006E 0%, #8338EC 100%);">
+                            <span style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 8</span>
+                            <i class="fa-solid fa-brain" style="font-size: 3rem; color: white; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem;">Canvas Brainstorming</h2>
+                            <p style="color:white; font-size:0.95rem;">Espacio estructurado para cruzar ideas pedagógicas y tecnológicas orientadas a la retención de estudiantes vulnerables.</p>
+                            <button class="support-btn" style="margin-top:auto; width:100%; font-size:0.9rem; color:#FF006E;" onclick="alert('Abriendo canvas...')">Ver Documento</button>
+                        </div>
+
+                        <!-- Slide 9 -->
+                        <div class="swiper-slide" style="background: linear-gradient(135deg, #005A9C 0%, #2EC4B6 100%);">
+                            <span style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:bold; margin-bottom:10px;">📄 Doc 9</span>
+                            <i class="fa-solid fa-filter" style="font-size: 3rem; color: #FF9F1C; margin-bottom: 20px;"></i>
+                            <h2 style="color:white; font-size:1.8rem;">Clasificación de Ideas</h2>
+                            <p style="color:white; font-size:0.95rem;">Filtro final para seleccionar la propuesta de intervención más viable económica y técnicamente para colegios municipales.</p>
+                            <button class="btn-secondary" style="margin-top:auto; width:100%; font-size:0.9rem; color:#005A9C;" onclick="alert('Abriendo clasificación...')">Ver Documento</button>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next" style="color:var(--primary);"></div>
+                    <div class="swiper-button-prev" style="color:var(--primary);"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="section-header" id="contacto">
+            <h2>Súmate a la Red EduChile</h2>
+            <p>Ya sea que representes a un colegio municipal/subvencionado, o seas un apoderado buscando matrícula.</p>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Gracias por contactarnos. Un coordinador educativo te llamará pronto.');">
+            <div class="input-group">
+                <label style="font-weight:600; margin-bottom:5px; display:block; color:var(--text-light);">Perfil:</label>
+                <select required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="colegio">Director / Representante de Colegio</option>
+                    <option value="apoderado">Apoderado / Estudiante</option>
+                    <option value="docente">Docente voluntario</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Nombre de contacto / Institución" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <textarea placeholder="Cuéntanos tu situación (Ej: Mi colegio sufre alta deserción, o, mi hijo sufre bullying y necesita estudiar en casa)..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fa-solid fa-graduation-cap"></i> EduChile Red Nacional
+        </div>
+        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 0.95rem; opacity: 0.8;">
+            Una iniciativa social para democratizar la educación, proteger la salud mental de nuestros niños y jóvenes, y erradicar la deserción escolar en todos los rincones de Chile.
+        </p>
+        <div style="font-size: 0.85rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+            &copy; 2026 EduChile. Educación Digna y Segura. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        function ir(seccion) {
+            document.getElementById(seccion).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function login() {
+            alert('🔐 Ingresando al Aula Virtual Segura...');
+        }
+
+        // Cambio de Tabs en la sección Portales
+        function cambiarPortal(tipo) {
+            document.querySelectorAll('.portal-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById('tab-' + tipo).classList.add('active');
+
+            const content = document.getElementById('portal-content');
+            if (tipo === 'alumno') {
+                content.innerHTML = `
+                    <div class="portal-text">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Tu espacio personal de aprendizaje</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.6;">Accede a tus clases en vivo, revisa grabaciones de días anteriores y entrega tus tareas sin estrés. Aquí llevas tu propio ritmo.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Asistencia a clases por videollamada segura.</li>
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Foro de dudas respetuoso y moderado.</li>
+                        </ul>
+                    </div>
+                    <div class="portal-img" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop');"></div>
+                `;
+            } else if (tipo === 'apoderado') {
+                content.innerHTML = `
+                    <div class="portal-text">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Acompañamiento transparente</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.6;">Monitorea el avance de tu hijo, comunícate directamente con los docentes y recibe reportes psicopedagógicos de manera periódica.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Visualización de notas y asistencia.</li>
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Reuniones de apoderados virtuales.</li>
+                        </ul>
+                    </div>
+                    <div class="portal-img" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop');"></div>
+                `;
+            } else if (tipo === 'colegio') {
+                content.innerHTML = `
+                    <div class="portal-text">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Integración para Colegios</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; line-height: 1.6;">Plataforma integral para directores y docentes. Mantén la matrícula de tus estudiantes vulnerables impartiendo tus propias clases en nuestro sistema.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Panel administrativo Mineduc.</li>
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color:var(--accent); margin-right:10px;"></i> Capacitación digital para docentes.</li>
+                        </ul>
+                    </div>
+                    <div class="portal-img" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop');"></div>
+                `;
+            }
+        }
+
+        // --- BASE DE DATOS DE LA BIBLIOTECA (MINEDUC) ---
+        const materialesBD = [
+            // 1° Básico
+            { nivel: "1 basico", curso: "1° Básico", asignatura: "Lenguaje", tema: "Apresto y Vocales", desc: "Guía interactiva para aprender el sonido y trazo de las vocales." },
+            { nivel: "1 basico", curso: "1° Básico", asignatura: "Matemáticas", tema: "Números del 0 al 10", desc: "Ejercicios visuales para contar e identificar cantidades." },
+            // 2° Básico
+            { nivel: "2 basico", curso: "2° Básico", asignatura: "Lenguaje", tema: "Comprensión Lectora Inicial", desc: "Cuentos cortos y preguntas de desarrollo simple." },
+            { nivel: "2 basico", curso: "2° Básico", asignatura: "Matemáticas", tema: "Sumas y Restas Básicas", desc: "Problemas matemáticos con apoyo de material concreto en video." },
+            // 5° Básico
+            { nivel: "5 basico", curso: "5° Básico", asignatura: "Ciencias Naturales", tema: "El cuerpo humano: Sistema Digestivo", desc: "Animación 3D del proceso de digestión y guía de repaso." },
+            { nivel: "5 basico", curso: "5° Básico", asignatura: "Historia", tema: "Zonas Naturales de Chile", desc: "Mapa interactivo sobre flora, fauna y clima de nuestro país." },
+            // 8° Básico
+            { nivel: "8 basico", curso: "8° Básico", asignatura: "Ciencias Naturales", tema: "La Célula: Estructura y Función", desc: "Profundización en organelos celulares y diferencias entre célula animal y vegetal." },
+            { nivel: "8 basico", curso: "8° Básico", asignatura: "Matemáticas", tema: "Álgebra: Expresiones Algebraicas", desc: "Introducción a las letras como variables matemáticas y ecuaciones de primer grado." },
+            { nivel: "8 basico", curso: "8° Básico", asignatura: "Historia", tema: "La Edad Moderna", desc: "Renacimiento, reforma religiosa y la revolución científica." },
+            // 1° Medio
+            { nivel: "1 medio", curso: "1° Medio", asignatura: "Biología", tema: "Evolución y Biodiversidad", desc: "Teorías evolutivas, selección natural de Darwin y evidencia fósil." },
+            { nivel: "1 medio", curso: "1° Medio", asignatura: "Historia", tema: "Revolución Industrial", desc: "Impacto tecnológico y social de la industrialización en el siglo XIX." },
+            // 2° Medio
+            { nivel: "2 medio", curso: "2° Medio", asignatura: "Física", tema: "Cinemática y Movimiento", desc: "Análisis del movimiento rectilíneo uniforme y acelerado con simuladores." },
+            { nivel: "2 medio", curso: "2° Medio", asignatura: "Matemáticas", tema: "Sistemas de Ecuaciones", desc: "Resolución por métodos de igualación, sustitución y reducción." },
+            // 3° Medio
+            { nivel: "3 medio", curso: "3° Medio", asignatura: "Educación Ciudadana", tema: "El Estado y la Democracia", desc: "División de poderes, Constitución y mecanismos de participación." },
+            { nivel: "3 medio", curso: "3° Medio", asignatura: "Matemáticas", tema: "Números Complejos", desc: "Definición, operaciones básicas y representación en el plano de Argand." },
+            // 4° Medio
+            { nivel: "4 medio", curso: "4° Medio", asignatura: "Matemáticas", tema: "Funciones y Probabilidad", desc: "Probabilidad condicionada, distribución normal y análisis de funciones." },
+            { nivel: "4 medio", curso: "4° Medio", asignatura: "Lenguaje", tema: "Literatura Contemporánea", desc: "Análisis de vanguardias literarias del siglo XX y técnicas narrativas." },
+            { nivel: "4 medio", curso: "4° Medio", asignatura: "Ciencias para la Ciudadanía", tema: "Salud Humana y Medicina", desc: "Prevención de enfermedades, vacunas y salud pública." }
+        ];
+
+        function renderMateriales(data) {
+            const grid = document.getElementById('materialsGrid');
+            grid.innerHTML = '';
+
+            if(data.length === 0) {
+                grid.innerHTML = '<p style="color:var(--text-light); text-align:center; grid-column:1/-1;">No se encontraron materiales para esta búsqueda.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                let colorBase = "var(--primary)";
+                if(item.asignatura.includes("Mate")) colorBase = "#457B9D";
+                else if(item.asignatura.includes("Cien") || item.asignatura.includes("Biol") || item.asignatura.includes("Fís")) colorBase = "#2A9D8F";
+                else if(item.asignatura.includes("Histo") || item.asignatura.includes("Ciuda")) colorBase = "#E9C46A";
+                else if(item.asignatura.includes("Leng")) colorBase = "#E63946";
+
+                const card = document.createElement('div');
+                card.className = 'material-card';
+                card.style.borderLeftColor = colorBase;
+                card.innerHTML = `
+                    <div class="material-badge">${item.curso}</div>
+                    <span style="color:${colorBase}; font-size:0.85rem; font-weight:700; text-transform:uppercase;">${item.asignatura}</span>
+                    <h3 style="margin: 10px 0; font-size: 1.3rem;">${item.tema}</h3>
+                    <p style="color:var(--text-light); font-size:0.95rem; line-height:1.5; margin-bottom: 20px;">${item.desc}</p>
+                    <button class="nav-btn" style="color:${colorBase}; padding:0;" onclick="alert('Descargando guía de ${item.tema}...')"><i class="fa-solid fa-download"></i> Descargar Material</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filtrarMateriales() {
+            const nivelFiltro = document.getElementById('nivelSelect').value;
+            const textoFiltro = document.getElementById('searchInput').value.toLowerCase();
+
+            const resultados = materialesBD.filter(item => {
+                const matchNivel = (nivelFiltro === 'todos') || (item.nivel === nivelFiltro);
+                const stringToSearch = (item.tema + " " + item.asignatura + " " + item.desc).toLowerCase();
+                const matchTexto = stringToSearch.includes(textoFiltro);
+                return matchNivel && matchTexto;
+            });
+
+            renderMateriales(resultados);
+        }
+
+        // Inicializar Swiper y renderizar biblioteca al cargar
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMateriales(materialesBD);
+
+            new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+    </script>
+</body>
+</html>
