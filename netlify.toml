@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/clasesonline.html"
+  status = 200
