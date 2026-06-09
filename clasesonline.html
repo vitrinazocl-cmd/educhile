@@ -507,6 +507,29 @@
             .mission-grid { grid-template-columns: 1fr; }
             .portal-content { flex-direction: column; }
             nav { display: none; }
+            
+            .portales-wrapper { padding: 20px; }
+            .portal-tabs {
+                flex-direction: column;
+                gap: 10px;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            .portal-tab {
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+                border-radius: 8px;
+                margin-bottom: 0;
+                background: var(--bg-light);
+                padding: 12px;
+                font-size: 1.1rem;
+            }
+            .portal-tab.active {
+                background: var(--primary);
+                color: var(--white);
+                border-bottom: none;
+            }
         }
     </style>
 </head>
