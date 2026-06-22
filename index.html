@@ -69,7 +69,7 @@
         h1.slogan {
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(1.5rem, 4vw, 3.5rem);
             color: var(--white);
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -136,8 +136,8 @@
     <div class="video-container">
         <!-- El video se reproduce en silencio (muted), en loop y sin controles -->
         <video autoplay muted loop playsinline>
-            <!-- Usamos el archivo de video solicitado -->
-            <source src="video educacion.mp4" type="video/mp4">
+            <!-- Usamos el archivo de video solicitado, asegurando que el espacio se lea correctamente -->
+            <source src="video%20educacion.mp4" type="video/mp4">
             Tu navegador no soporta videos en HTML5.
         </video>
     </div>
