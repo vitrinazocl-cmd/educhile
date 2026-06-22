@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduChile - Innovación y Emprendimiento I - INACAP</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Decoration Grid & Gradients -->
+    <div class="bg-decor bg-glow-1"></div>
+    <div class="bg-decor bg-glow-2"></div>
+    <div class="bg-decor bg-grid"></div>
+
+    <!-- Presentation Container -->
+    <div class="presentation-container" id="presentation">
+
+        <!-- SLIDE 1: PORTADA -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content cover-slide">
+                <div class="badge-accent">EVALUACIÓN SUMATIVA 2</div>
+                <h1 class="main-title">EduChile</h1>
+                <h2 class="main-subtitle">Plataforma Web Educativa para la Reducción de la Deserción Escolar en Chile</h2>
+                
+                <div class="cover-footer">
+                    <div class="info-block">
+                        <span class="label">Asignatura</span>
+                        <span class="value">Innovación y Emprendimiento I</span>
+                        <span class="sub-value">INACAP — FVIE01 — Junio 2026</span>
+                    </div>
+                    <div class="team-block">
+                        <span class="label">Integrantes</span>
+                        <div class="team-grid">
+                            <span>Isai Aguilera</span>
+                            <span>Mauricio Vega</span>
+                            <span>Francisco Cárcamo</span>
+                            <span>Sebastián Ortega</span>
+                            <span>Peter Cañar</span>
+                            <span>Juan Mena</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: ÍNDICE / ESTRUCTURA -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">Contenido</span>
+                    <h2 class="slide-title">Estructura de la Presentación</h2>
+                </div>
+                
+                <div class="index-grid">
+                    <div class="index-card" data-target="3">
+                        <span class="index-num">01</span>
+                        <span class="index-text">Contexto Inicial y Desafío Redefinido</span>
+                    </div>
+                    <div class="index-card" data-target="4">
+                        <span class="index-num">02</span>
+                        <span class="index-text">Idea de Solución — EduChile</span>
+                    </div>
+                    <div class="index-card" data-target="5">
+                        <span class="index-num">03</span>
+                        <span class="index-text">Modelo de Negocio — BMC Versión 1</span>
+                    </div>
+                    <div class="index-card" data-target="6">
+                        <span class="index-num">04</span>
+                        <span class="index-text">Factibilidad, Deseabilidad y Viabilidad</span>
+                    </div>
+                    <div class="index-card" data-target="7">
+                        <span class="index-num">05</span>
+                        <span class="index-text">Proceso de Experimentación</span>
+                    </div>
+                    <div class="index-card" data-target="8">
+                        <span class="index-num">06</span>
+                        <span class="index-text">Test Card — Hipótesis y Experimento</span>
+                    </div>
+                    <div class="index-card" data-target="9">
+                        <span class="index-num">07</span>
+                        <span class="index-text">Resultados e Insights del Testeo</span>
+                    </div>
+                    <div class="index-card" data-target="10">
+                        <span class="index-num">08</span>
+                        <span class="index-text">Ajustes del Modelo — BMC Versión 2</span>
+                    </div>
+                    <div class="index-card" data-target="11">
+                        <span class="index-num">09</span>
+                        <span class="index-text">Propuesta de Valor Detallada</span>
+                    </div>
+                    <div class="index-card" data-target="12">
+                        <span class="index-num">10</span>
+                        <span class="index-text">Conclusiones Finales</span>
+                    </div>
+                    <div class="index-card" data-target="13">
+                        <span class="index-num">11</span>
+                        <span class="index-text">Evidencias del Proceso</span>
+                    </div>
+                    <div class="index-card" data-target="14">
+                        <span class="index-num">12</span>
+                        <span class="index-text">Cierre y Preguntas</span>
+                    </div>
+                </div>
+
+                <div class="learning-outcome">
+                    <strong>Aprendizaje Esperado 2.1:</strong> Aplica un modelo de negocio para la solución de problemas, considerando experimentación con clientes o usuarios.
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: 01 | CONTEXTO INICIAL Y DESAFÍO REDEFINIDO -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">01 | Diagnóstico</span>
+                    <h2 class="slide-title">Contexto Inicial y Desafío Redefinido</h2>
+                </div>
+
+                <div class="two-column-layout">
+                    <div class="left-col">
+                        <div class="info-card warning-accent">
+                            <h3>El Problema: Deserción Escolar</h3>
+                            <div class="stat-highlight">65.000+</div>
+                            <p>jóvenes abandonan el sistema escolar anualmente en Chile. La Región Metropolitana presenta la mayor concentración urbana de deserción del país.</p>
+                            <div class="critical-stage">
+                                <span class="badge red">Etapa Crítica</span>
+                                <strong>1° y 2° de Enseñanza Media</strong> son los cursos con mayor índice de abandono.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-col">
+                        <h3 class="subsection-title">Hallazgos Principales (Investigación Unidad 1)</h3>
+                        <div class="findings-grid">
+                            <div class="finding-card">
+                                <div class="finding-num">H1</div>
+                                <h4>Falta de Acompañamiento</h4>
+                                <p>Frente a inasistencias o bajas notas, solo llega un SMS automático al apoderado. No hay intervención ni seguimiento real.</p>
+                            </div>
+                            <div class="finding-card">
+                                <div class="finding-num">H2</div>
+                                <h4>Brechas de Aprendizaje</h4>
+                                <p>Los estudiantes arrastran lagunas curriculares de años anteriores sin planes de recuperación estructurados.</p>
+                            </div>
+                            <div class="finding-card">
+                                <div class="finding-num">H3</div>
+                                <h4>Entorno Personal Complejo</h4>
+                                <p>Alumnos que trabajan, cuidan familiares o duermen poco (5 hrs.). El liceo no tiene mecanismos de apoyo para ellos.</p>
+                            </div>
+                            <div class="finding-card">
+                                <div class="finding-num">H4</div>
+                                <h4>Falta de Pertenencia</h4>
+                                <p>Bullying sin seguimiento activo, participación escolar cerrada y ausencia de bienestar emocional en el aula.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="focus-card highlight-border">
+                    <span class="focus-label">Pregunta de Desafío Redefinido</span>
+                    <p class="challenge-question">"¿Cómo podríamos fortalecer el acompañamiento socioemocional y académico de los estudiantes de enseñanza media en riesgo de deserción, reduciendo el ausentismo y la desmotivación, en liceos públicos y particulares subvencionados de la Región Metropolitana?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: 02 | IDEA DE SOLUCIÓN — EDUCHILE -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">02 | Solución</span>
+                    <h2 class="slide-title">EduChile: Plataforma Web Educativa Integral</h2>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="solution-left">
+                        <div class="solution-intro">
+                            <h3>¿Qué es EduChile?</h3>
+                            <p>Una plataforma web educativa integral diseñada para combatir la deserción escolar en Chile mediante el acceso a contenidos formativos, nivelación escolar y un fuerte lazo con el entorno familiar.</p>
+                            
+                            <div class="levels-covered">
+                                <h4>Cobertura Curricular Completa</h4>
+                                <div class="levels-flex">
+                                    <span class="level-tag">Kínder (Parvularia)</span>
+                                    <span class="level-tag">Enseñanza Básica (1° a 8°)</span>
+                                    <span class="level-tag">Enseñanza Media (1° a 4°)</span>
+                                </div>
+                            </div>
+
+                            <a href="https://claseseduchile.netlify.app/" target="_blank" class="prototype-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                Prototipo Funcional: claseseduchile.netlify.app
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="solution-right">
+                        <div class="features-cards">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                </div>
+                                <div class="feature-body">
+                                    <h4>Clases Online 24/7</h4>
+                                    <p>Contenido multimedia grabado y en vivo para todos los niveles de enseñanza, accesible en cualquier momento.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                </div>
+                                <div class="feature-body">
+                                    <h4>Exámenes Libres</h4>
+                                    <p>Evaluaciones formativas flexibles, sin presión horaria y con retroalimentación correctiva inmediata.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <div class="feature-body">
+                                    <h4>Monitoreo del Apoderado</h4>
+                                    <p>Dashboard familiar con alertas en tiempo real, registro de asistencia y rendimiento escolar.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                                </div>
+                                <div class="feature-body">
+                                    <h4>Interfaz Mobile-First</h4>
+                                    <p>Experiencia intuitiva y optimizada para teléfonos inteligentes, disminuyendo barreras digitales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="innovation-highlight">
+                    <span class="star-badge">★ Innovación Clave</span>
+                    <p><strong>EduChile</strong> es la única plataforma que integra <strong>acceso educativo formal + acompañamiento socioemocional + monitoreo familiar directo</strong> en un solo ecosistema enfocado en la permanencia escolar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: 03 | MODELO DE NEGOCIO — BMC VERSIÓN 1 -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">03 | Negocio</span>
+                    <h2 class="slide-title">Business Model Canvas — Versión Inicial (V1)</h2>
+                </div>
+
+                <!-- BMC Grid Layout -->
+                <div class="bmc-container">
+                    <div class="bmc-grid">
+                        
+                        <!-- Key Partners -->
+                        <div class="bmc-cell partners">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">🤝</span>
+                                <h3>Socios Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>MINEDUC y Municipalidades RM</li>
+                                <li>JUNAEB</li>
+                                <li>Liceos públicos y particulares subvencionados</li>
+                                <li>Empresas tecnológicas</li>
+                                <li>Docentes y tutores freelance</li>
+                                <li>ONGs de educación inclusiva</li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Activities -->
+                        <div class="bmc-cell activities">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">⚡</span>
+                                <h3>Actividades Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Desarrollo y mantención web</li>
+                                <li>Creación de contenido alineado al currículum</li>
+                                <li>Monitoreo y análisis de datos</li>
+                                <li>Capacitación docente y soporte técnico</li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Resources -->
+                        <div class="bmc-cell resources">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">🔧</span>
+                                <h3>Recursos Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Plataforma web (Netlify)</li>
+                                <li>Equipo de desarrollo TI</li>
+                                <li>Contenido curricular alineado</li>
+                                <li>Base de datos y algoritmo de alertas</li>
+                            </ul>
+                        </div>
+
+                        <!-- Value Proposition -->
+                        <div class="bmc-cell value-prop">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💡</span>
+                                <h3>Propuesta de Valor</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Acceso educativo online 24/7</li>
+                                <li>Clases y exámenes libres de nivelación</li>
+                                <li>Monitoreo familiar en tiempo real</li>
+                                <li>Alertas predictivas de deserción</li>
+                                <li>Acompañamiento socioemocional integrado</li>
+                                <li>Prototipo web funcional listo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Relationships -->
+                        <div class="bmc-cell relations">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">❤️</span>
+                                <h3>Relación con Clientes</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Plataforma autoservicio 24/7</li>
+                                <li>Chat de soporte en línea</li>
+                                <li>Notificaciones automáticas</li>
+                                <li>Comunidades de aprendizaje</li>
+                                <li>Tutorías dirigidas por perfil</li>
+                            </ul>
+                        </div>
+
+                        <!-- Channels -->
+                        <div class="bmc-cell channels">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">📣</span>
+                                <h3>Canales</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Sitio web oficial</li>
+                                <li>Alianzas directas con liceos</li>
+                                <li>Redes sociales y correos electrónicos</li>
+                                <li>Aplicación móvil (proyectada)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Segments -->
+                        <div class="bmc-cell segments">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">👤</span>
+                                <h3>Segmentos de Clientes</h3>
+                            </div>
+                            <div class="segment-group">
+                                <h4>Primario</h4>
+                                <ul class="bmc-list">
+                                    <li>Estudiantes de enseñanza media en riesgo de deserción</li>
+                                    <li>Apoderados de liceos RM</li>
+                                </ul>
+                                <h4>Secundario</h4>
+                                <ul class="bmc-list">
+                                    <li>Liceos y colegios RM</li>
+                                    <li>Docentes y orientadores</li>
+                                    <li>MINEDUC / JUNAEB</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Cost Structure -->
+                        <div class="bmc-cell costs">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💰</span>
+                                <h3>Estructura de Costos</h3>
+                            </div>
+                            <ul class="bmc-list horizontal-list">
+                                <li>Desarrollo TI y hosting web</li>
+                                <li>Salarios docentes y equipo TI</li>
+                                <li>Campañas de marketing digital</li>
+                                <li>Capacitaciones y soporte técnico</li>
+                            </ul>
+                        </div>
+
+                        <!-- Revenue Streams -->
+                        <div class="bmc-cell revenues">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💵</span>
+                                <h3>Fuentes de Ingresos</h3>
+                            </div>
+                            <ul class="bmc-list horizontal-list">
+                                <li>Suscripciones familiares (freemium)</li>
+                                <li>Licencias institucionales para liceos</li>
+                                <li>Subsidios públicos (MINEDUC/JUNAEB)</li>
+                                <li>Certificaciones académicas de pago</li>
+                                <li>Convenios municipales</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: 04 | FACTIBILIDAD, DESEABILIDAD Y VIABILIDAD -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">04 | Análisis</span>
+                    <h2 class="slide-title">Evaluación del Modelo de Negocio V1</h2>
+                </div>
+
+                <div class="three-cards-layout">
+                    <div class="eval-card">
+                        <div class="eval-status-badge success">VALIDADA</div>
+                        <div class="eval-icon">🛠️</div>
+                        <h3>Factibilidad</h3>
+                        <ul class="eval-list">
+                            <li>El equipo posee <strong>competencias técnicas</strong> internas (prototipo en línea).</li>
+                            <li><strong>Bajo costo inicial</strong> de desarrollo con herramientas open source y cloud hosting.</li>
+                            <li>Infraestructura escalable de manera progresiva.</li>
+                            <li>Módulos clave ya desarrollados y operativos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="eval-card">
+                        <div class="eval-status-badge success">VALIDADA</div>
+                        <div class="eval-icon">🎯</div>
+                        <h3>Deseabilidad</h3>
+                        <ul class="eval-list">
+                            <li><strong>12 entrevistas cualitativas</strong> confirman la necesidad de apoyo académico y emocional.</li>
+                            <li>Los apoderados exigen <strong>monitoreo e información fluida</strong>.</li>
+                            <li>Cubre brechas desatendidas por programas del gobierno como "Más Tarde No".</li>
+                            <li>La interfaz sencilla mitiga la brecha digital de apoderados.</li>
+                        </ul>
+                    </div>
+
+                    <div class="eval-card">
+                        <div class="eval-status-badge warning">PROYECTADA</div>
+                        <div class="eval-icon">📈</div>
+                        <h3>Viabilidad</h3>
+                        <ul class="eval-list">
+                            <li><strong>Múltiples canales de ingresos</strong>: licencias B2B, B2G y modelo freemium B2C.</li>
+                            <li>Escalabilidad nacional inmediata, extendible a LATAM.</li>
+                            <li>Un universo de <strong>65.000 estudiantes anuales</strong> en riesgo representa un mercado estable.</li>
+                            <li>Subsidios de innovación viables por impacto social.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="eval-conclusion">
+                    <p>El análisis inicial demuestra que <strong>EduChile</strong> es técnica y económicamente sustentable, lo que motivó el inicio de experimentos directos con usuarios en terreno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: 05 | PROCESO DE EXPERIMENTACIÓN — MODELO -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">05 | Experimento</span>
+                    <h2 class="slide-title">Diseño del Proceso de Experimentación</h2>
+                </div>
+
+                <div class="experiment-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Experimento</span>
+                        <span class="meta-val">Aceptación y uso de EduChile en la RM</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Fecha de Ejecución</span>
+                        <span class="meta-val">15 de Junio, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Duración</span>
+                        <span class="meta-val">2 Semanas</span>
+                    </div>
+                </div>
+
+                <div class="two-column-layout">
+                    <div class="left-col">
+                        <div class="info-card">
+                            <h3 class="card-subtitle">Bloques Críticos a Validar en el Canvas</h3>
+                            <div class="block-to-validate">
+                                <div class="validate-badge red">Crítico 1</div>
+                                <h4>Bloque: Propuesta de Valor (Deseabilidad)</h4>
+                                <p>Asumimos que los estudiantes y sus familias percibirán a EduChile como una herramienta útil que efectivamente previene el abandono escolar.</p>
+                            </div>
+                            <div class="block-to-validate">
+                                <div class="validate-badge amber">Crítico 2</div>
+                                <h4>Bloque: Segmento de Clientes (Encaje Solución)</h4>
+                                <p>Asumimos que los estudiantes en riesgo de deserción y sus apoderados están dispuestos a registrarse y utilizar activamente la plataforma.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="info-card border-accent">
+                            <h3 class="card-subtitle">Hipótesis Declaradas</h3>
+                            <div class="hypothesis-box">
+                                <div class="hypo-header">
+                                    <span class="hypo-badge">Hipótesis 1 (Estudiantes)</span>
+                                </div>
+                                <p>"Al menos el <strong>70% de los estudiantes</strong> de enseñanza media en riesgo de deserción que accedan a EduChile considerarán la plataforma útil para mejorar su rendimiento académico".</p>
+                            </div>
+                            <div class="hypothesis-box">
+                                <div class="hypo-header">
+                                    <span class="hypo-badge">Hipótesis 2 (Apoderados)</span>
+                                </div>
+                                <p>"Al menos el <strong>65% de los apoderados</strong> que utilicen el módulo de monitoreo escolar reportarán sentirse significativamente más informados sobre el desempeño de sus hijos".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: 06 | TEST CARD — HIPÓTESIS Y EXPERIMENTO -->
+        <section class="slide" id="slide-8">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">06 | Test Card</span>
+                    <h2 class="slide-title">Diseño de Pruebas: Test Card (Strategyzer)</h2>
+                </div>
+
+                <!-- Test Card Canvas layout -->
+                <div class="test-card-canvas">
+                    <div class="tc-header-row">
+                        <div class="tc-meta"><strong>Test:</strong> Validación de Utilidad y Adopción</div>
+                        <div class="tc-meta"><strong>Asignado a:</strong> Equipo EduChile</div>
+                        <div class="tc-meta"><strong>Límite:</strong> 30/06/2026</div>
+                    </div>
+
+                    <div class="tc-grid">
+                        <div class="tc-quadrant q1">
+                            <div class="q-num">1</div>
+                            <h3>HIPÓTESIS (We believe that...)</h3>
+                            <p>Creemos que al menos el <strong>70% de los estudiantes</strong> de enseñanza media considerará EduChile útil para su rendimiento, y que el <strong>65% de los apoderados</strong> se sentirá más informado a través de nuestro módulo de monitoreo escolar.</p>
+                        </div>
+
+                        <div class="tc-quadrant q2">
+                            <div class="q-num">2</div>
+                            <h3>PRUEBA (To verify this, we will...)</h3>
+                            <p>Desplegaremos el prototipo funcional web (<strong>claseseduchile.netlify.app</strong>). Enviaremos un video explicativo de 3 minutos e invitaremos a <strong>30 estudiantes y 20 apoderados</strong> de liceos públicos de la RM a navegar y responder una encuesta diagnóstica.</p>
+                        </div>
+
+                        <div class="tc-quadrant q3">
+                            <div class="q-num">3</div>
+                            <h3>MÉTRICA (And measure...)</h3>
+                            <ul class="metric-list-small">
+                                <li>% de valoración de utilidad (escala Likert 1-5).</li>
+                                <li>% de apoderados que declaran aumento de información.</li>
+                                <li>Tasa de respuesta de encuestas (Meta: >80%).</li>
+                                <li>Net Promoter Score (NPS) del producto (escala 0-10).</li>
+                            </ul>
+                        </div>
+
+                        <div class="tc-quadrant q4">
+                            <div class="q-num">4</div>
+                            <h3>CRITERIO DE ÉXITO (We are right if...)</h3>
+                            <ul class="success-criteria-list">
+                                <li>Estudiantes: Al menos <strong>21 de 30</strong> (70%) evalúan con nota ≥ 4 la utilidad.</li>
+                                <li>Apoderados: Al menos <strong>13 de 20</strong> (65%) reportan alta información escolar.</li>
+                                <li>El NPS promedio de recomendación es <strong>≥ 7.0/10</strong>.</li>
+                                <li>Rechazo o desinterés explícito es inferior al 20%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: 07 | RESULTADOS E INSIGHTS DEL TESTEO -->
+        <section class="slide" id="slide-9">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">07 | Evidencias</span>
+                    <h2 class="slide-title">Resultados e Insights del Experimento</h2>
+                </div>
+
+                <div class="results-layout">
+                    <!-- Metrics Section -->
+                    <div class="results-stats">
+                        <div class="stat-card-row">
+                            <div class="stat-card-circle val-success">
+                                <svg class="progress-ring" width="100" height="100">
+                                    <circle class="progress-ring__background" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                    <circle class="progress-ring__circle" stroke="#10b981" stroke-width="8" stroke-dasharray="263.89" stroke-dashoffset="63.33" fill="transparent" r="42" cx="50" cy="50"/>
+                                </svg>
+                                <div class="circle-text">76%</div>
+                                <span>Estudiantes<br><strong>H1 Validada (23/30)</strong></span>
+                            </div>
+
+                            <div class="stat-card-circle val-success">
+                                <svg class="progress-ring" width="100" height="100">
+                                    <circle class="progress-ring__background" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                    <circle class="progress-ring__circle" stroke="#10b981" stroke-width="8" stroke-dasharray="263.89" stroke-dashoffset="84.44" fill="transparent" r="42" cx="50" cy="50"/>
+                                </svg>
+                                <div class="circle-text">68%</div>
+                                <span>Apoderados<br><strong>H2 Validada (14/20)</strong></span>
+                            </div>
+
+                            <div class="stat-card-circle val-success">
+                                <svg class="progress-ring" width="100" height="100">
+                                    <circle class="progress-ring__background" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                    <circle class="progress-ring__circle" stroke="#6366f1" stroke-width="8" stroke-dasharray="263.89" stroke-dashoffset="58.05" fill="transparent" r="42" cx="50" cy="50"/>
+                                </svg>
+                                <div class="circle-text">7.8</div>
+                                <span>NPS Promedio<br><strong>Criterio Cumplido</strong></span>
+                            </div>
+
+                            <div class="stat-card-circle val-info">
+                                <svg class="progress-ring" width="100" height="100">
+                                    <circle class="progress-ring__background" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                    <circle class="progress-ring__circle" stroke="#f59e0b" stroke-width="8" stroke-dasharray="263.89" stroke-dashoffset="226.94" fill="transparent" r="42" cx="50" cy="50"/>
+                                </svg>
+                                <div class="circle-text">14%</div>
+                                <span>Rechazo/Desinterés<br><strong>Bajo el límite (20%)</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insights Section -->
+                    <div class="insights-container">
+                        <h3>Insights Clave del Experimento</h3>
+                        <div class="insights-stack">
+                            <div class="insight-item-box">
+                                <div class="insight-num-tag">I1</div>
+                                <div class="insight-text">
+                                    <strong>Deseabilidad Confirmada:</strong> Los alumnos destacaron la sencillez de la plataforma y el acceso 24/7. El 60% usaría la web para preparar exámenes libres de nivelación.
+                                </div>
+                            </div>
+                            <div class="insight-item-box">
+                                <div class="insight-num-tag">I2</div>
+                                <div class="insight-text">
+                                    <strong>Expansión de Segmento:</strong> Los apoderados son el grupo más motivado. Valoraron de gran manera las alertas y solicitaron incorporar notificaciones rápidas por <strong>WhatsApp</strong>.
+                                </div>
+                            </div>
+                            <div class="insight-item-box warning-border">
+                                <div class="insight-num-tag alert-tag">I3</div>
+                                <div class="insight-text">
+                                    <strong>Pivote Tecnológico Urgente:</strong> El **80% de los usuarios accedió desde smartphone**, no PC. La optimización para celulares y una app nativa son críticas para evitar barreras.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: 08 | AJUSTES DEL MODELO — BMC VERSIÓN 2 -->
+        <section class="slide" id="slide-10">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">08 | Negocio</span>
+                    <h2 class="slide-title">Business Model Canvas — Ajustado tras Testeo (V2)</h2>
+                </div>
+
+                <!-- BMC Grid Layout adjusted (V2) -->
+                <div class="bmc-container">
+                    <div class="bmc-grid v2-canvas">
+                        
+                        <!-- Key Partners -->
+                        <div class="bmc-cell partners">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">🤝</span>
+                                <h3>Socios Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>MINEDUC y Municipalidades RM</li>
+                                <li>JUNAEB</li>
+                                <li>Liceos públicos y subvencionados</li>
+                                <li>Empresas tecnológicas</li>
+                                <li>Docentes freelance</li>
+                                <li class="new-item">Desarrolladores de App Móvil <span class="new-badge">NUEVO</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Activities -->
+                        <div class="bmc-cell activities">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">⚡</span>
+                                <h3>Actividades Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Desarrollo web y plataforma</li>
+                                <li class="new-item">Desarrollo app móvil nativa <span class="new-badge">NUEVO</span></li>
+                                <li>Creación de contenido educativo</li>
+                                <li>Monitoreo y análisis de datos</li>
+                                <li>Capacitación a docentes</li>
+                            </ul>
+                        </div>
+
+                        <!-- Key Resources -->
+                        <div class="bmc-cell resources">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">🔧</span>
+                                <h3>Recursos Claves</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Plataforma web (Netlify)</li>
+                                <li class="new-item">App móvil nativa en tiendas <span class="new-badge">NUEVO</span></li>
+                                <li>Equipo de desarrollo TI</li>
+                                <li>Contenido curricular y alertas</li>
+                            </ul>
+                        </div>
+
+                        <!-- Value Proposition -->
+                        <div class="bmc-cell value-prop">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💡</span>
+                                <h3>Propuesta de Valor</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Acceso educativo online 24/7</li>
+                                <li>Clases y exámenes libres</li>
+                                <li class="new-item">App móvil nativa (Optimizado) <span class="new-badge">NUEVO</span></li>
+                                <li class="new-item">Notif. WhatsApp a apoderados <span class="new-badge">NUEVO</span></li>
+                                <li>Monitoreo familiar en tiempo real</li>
+                                <li>Alertas automáticas de deserción</li>
+                                <li>Interfaz simple adaptada a celular</li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Relationships -->
+                        <div class="bmc-cell relations">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">❤️</span>
+                                <h3>Relación con Clientes</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Plataforma web 24/7</li>
+                                <li class="new-item">App móvil y alertas directas <span class="new-badge">NUEVO</span></li>
+                                <li class="new-item">Mensajes rápidos vía WhatsApp <span class="new-badge">NUEVO</span></li>
+                                <li>Chat de soporte en línea</li>
+                                <li>Comunidad de aprendizaje</li>
+                            </ul>
+                        </div>
+
+                        <!-- Channels -->
+                        <div class="bmc-cell channels">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">📣</span>
+                                <h3>Canales</h3>
+                            </div>
+                            <ul class="bmc-list">
+                                <li>Sitio web y redes sociales</li>
+                                <li class="new-item">App móvil nativa (Android/iOS) <span class="new-badge">NUEVO</span></li>
+                                <li class="new-item">Integración API WhatsApp <span class="new-badge">NUEVO</span></li>
+                                <li>Alianzas con liceos</li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Segments -->
+                        <div class="bmc-cell segments">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">👤</span>
+                                <h3>Segmentos de Clientes</h3>
+                            </div>
+                            <div class="segment-group">
+                                <h4>Primario</h4>
+                                <ul class="bmc-list">
+                                    <li>Estudiantes enseñanza media en riesgo</li>
+                                    <li class="new-item">Apoderados como segmento activo <span class="ampli-badge">AMPLIADO</span></li>
+                                </ul>
+                                <h4>Secundario</h4>
+                                <ul class="bmc-list">
+                                    <li>Liceos y colegios RM</li>
+                                    <li>Orientadores y docentes</li>
+                                    <li>MINEDUC / JUNAEB</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Cost Structure -->
+                        <div class="bmc-cell costs">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💰</span>
+                                <h3>Estructura de Costos</h3>
+                            </div>
+                            <ul class="bmc-list horizontal-list">
+                                <li>Desarrollo web y app móvil (+costo) <span class="new-badge">NUEVO</span></li>
+                                <li>Infraestructura de servidores escalables</li>
+                                <li>Salarios docentes y equipo TI ampliado</li>
+                                <li>Integración API WhatsApp Business <span class="new-badge">NUEVO</span></li>
+                                <li>Marketing digital y capacitaciones</li>
+                            </ul>
+                        </div>
+
+                        <!-- Revenue Streams -->
+                        <div class="bmc-cell revenues">
+                            <div class="bmc-cell-header">
+                                <span class="bmc-icon">💵</span>
+                                <h3>Fuentes de Ingresos</h3>
+                            </div>
+                            <ul class="bmc-list horizontal-list">
+                                <li>Suscripción freemium familiar</li>
+                                <li class="new-item">Plan Premium en App Móvil <span class="new-badge">NUEVO</span></li>
+                                <li>Licencias institucionales liceos</li>
+                                <li>Subsidios MINEDUC / JUNAEB</li>
+                                <li>Convenios con municipalidades</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 11: 09 | PROPUESTA DE VALOR DETALLADA -->
+        <section class="slide" id="slide-11">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">09 | Ecosistema</span>
+                    <h2 class="slide-title">Valor Generado para Cada Actor Clave</h2>
+                </div>
+
+                <div class="three-cards-layout">
+                    <div class="actor-card student-color">
+                        <h3>Para Estudiantes</h3>
+                        <ul class="actor-list">
+                            <li><strong>Clases 24/7</strong>: Flexibilidad total para estudiantes que trabajan o cuidan familiares.</li>
+                            <li><strong>Exámenes Libres</strong>: Preparación sin presión, con autoevaluación interactiva.</li>
+                            <li><strong>Acompañamiento</strong>: Nivelación escolar amigable y sin juicios de rendimiento.</li>
+                            <li><strong>Foco Móvil</strong>: Plataforma optimizada para smartphones.</li>
+                        </ul>
+                    </div>
+
+                    <div class="actor-card parent-color">
+                        <h3>Para Apoderados</h3>
+                        <ul class="actor-list">
+                            <li><strong>Dashboard de Asistencia</strong>: Monitoreo diario del estado del alumno.</li>
+                            <li><strong>Alertas Tempranas</strong>: Detección preventiva de riesgo de deserción.</li>
+                            <li><strong>Notificación en WhatsApp</strong>: Avisos ágiles directo a la mensajería más usada.</li>
+                            <li><strong>Vínculo al Hogar</strong>: Reporte e involucramiento activo en el proceso escolar.</li>
+                        </ul>
+                    </div>
+
+                    <div class="actor-card institution-color">
+                        <h3>Liceos y MINEDUC</h3>
+                        <ul class="actor-list">
+                            <li><strong>Datos en Tiempo Real</strong>: Dashboards con analíticas de retención y alertas.</li>
+                            <li><strong>Menor Carga Administrativa</strong>: Automatización del seguimiento de ausentismo.</li>
+                            <li><strong>Complemento Social</strong>: Sinergia directa con el programa estatal "Más Tarde No".</li>
+                            <li><strong>Bajo Costo Físico</strong>: Solución en la nube, rápida de implementar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="advantages-box">
+                    <h4>Ventajas Competitivas de EduChile</h4>
+                    <div class="advantages-grid">
+                        <div class="adv-item">
+                            <strong>Integración Total:</strong> Combina clases, nivelación, alertas y factor socioemocional.
+                        </div>
+                        <div class="adv-item">
+                            <strong>Modelo Freemium:</strong> Gratuidad base garantizada que elimina barreras socioeconómicas.
+                        </div>
+                        <div class="adv-item">
+                            <strong>100% Mobile-First:</strong> Diseñado para los dispositivos y canales que los usuarios reales usan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 12: 10 | CONCLUSIONES GENERALES -->
+        <section class="slide" id="slide-12">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">10 | Síntesis</span>
+                    <h2 class="slide-title">Conclusiones del Proceso de Experimentación</h2>
+                </div>
+
+                <div class="three-columns-narrow">
+                    <div class="conclusion-column">
+                        <div class="c-num success">✓</div>
+                        <h4>Deseabilidad</h4>
+                        <p><strong>Cerrada con éxito.</strong> Las entrevistas y el testeo cuantitativo demuestran que tanto apoderados (68%) como estudiantes (76%) valoran y exigen herramientas de acompañamiento escolar que no se centren solo en notas, sino en el entorno familiar.</p>
+                    </div>
+
+                    <div class="conclusion-column">
+                        <div class="c-num success">✓</div>
+                        <h4>Factibilidad</h4>
+                        <p><strong>Comprobada técnicamente.</strong> Contamos con un prototipo web funcional y estable. Los ajustes (diseño mobile-first e integración con la API de WhatsApp) son técnicamente viables con el equipo actual y herramientas existentes.</p>
+                    </div>
+
+                    <div class="conclusion-column">
+                        <div class="c-num success">✓</div>
+                        <h4>Viabilidad</h4>
+                        <p><strong>Alineación y Sostenibilidad.</strong> El proyecto abarca un mercado real latente de +65.000 estudiantes y cuenta con un esquema de financiamiento público-privado sustentable (suscripciones, licencias y subvenciones del Estado).</p>
+                    </div>
+                </div>
+
+                <div class="final-statement highlight-border">
+                    <h4>Conclusión del Ciclo</h4>
+                    <p>EduChile ha demostrado ser una <strong>solución factible, deseable y económicamente viable</strong>, que resuelve un vacío crítico en la retención escolar de la RM. Los hallazgos del experimento validaron el modelo y permitieron iterarlo a tiempo. El proyecto está listo para pasar a la etapa de desarrollo y pilotaje en terreno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 13: 11 | EVIDENCIAS DEL PROCESO -->
+        <section class="slide" id="slide-13">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-category">11 | Respaldos</span>
+                    <h2 class="slide-title">Evidencias del Proceso de Validación</h2>
+                </div>
+
+                <div class="evidences-grid">
+                    <div class="evidence-card">
+                        <div class="evidence-icon">🌐</div>
+                        <h4>Prototipo Funcional</h4>
+                        <p>Plataforma web activa desarrollada con HTML/CSS/JS, con módulos listos en <a href="https://claseseduchile.netlify.app/" target="_blank">claseseduchile.netlify.app</a>.</p>
+                    </div>
+
+                    <div class="evidence-card">
+                        <div class="evidence-icon">📊</div>
+                        <h4>Encuesta de Testeo</h4>
+                        <p>Respuestas cuantitativas recopiladas de 30 estudiantes y 20 apoderados de la RM sobre utilidad del sistema.</p>
+                    </div>
+
+                    <div class="evidence-card">
+                        <div class="evidence-icon">🎥</div>
+                        <h4>Video Demostrativo</h4>
+                        <p>Registro audiovisual de 3 minutos guiando el uso de los módulos escolares y el panel de seguimiento de apoderados.</p>
+                    </div>
+
+                    <div class="evidence-card">
+                        <div class="evidence-icon">📁</div>
+                        <h4>Matriz de Respuestas</h4>
+                        <p>Sistematización de feedback, promedios de respuestas Likert e indicador NPS del experimento calculado en 7.8.</p>
+                    </div>
+
+                    <div class="evidence-card">
+                        <div class="evidence-icon">💬</div>
+                        <h4>Registro Cualitativo</h4>
+                        <p>Bitácoras y registros de las 12 entrevistas en profundidad que dieron origen a la redefinición del desafío escolar.</p>
+                    </div>
+
+                    <div class="evidence-card">
+                        <div class="evidence-icon">🗺️</div>
+                        <h4>Mapa de Ajustes BMC</h4>
+                        <p>Documentación técnica de cambios estructurales e iteraciones aplicadas entre el BMC V1 y el BMC V2.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 14: 12 | CIERRE Y PREGUNTAS -->
+        <section class="slide" id="slide-14">
+            <div class="slide-content cover-slide ending-slide">
+                <h1 class="ending-thanks">¡Muchas Gracias!</h1>
+                <p class="ending-tagline">EduChile: Innovando para asegurar el futuro escolar de Chile</p>
+
+                <div class="ending-web">
+                    <span class="web-label">Visita el Prototipo</span>
+                    <a href="https://claseseduchile.netlify.app/" target="_blank" class="web-link">claseseduchile.netlify.app</a>
+                </div>
+
+                <div class="ending-footer">
+                    <div class="ending-team">
+                        <span>Isai Aguilera</span>
+                        <span>Mauricio Vega</span>
+                        <span>Francisco Cárcamo</span>
+                        <span>Sebastián Ortega</span>
+                        <span>Peter Cañar</span>
+                        <span>Juan Mena</span>
+                    </div>
+                    <div class="ending-meta">
+                        <span>FVIE01 — Innovación y Emprendimiento I</span>
+                        <span>INACAP 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- PRESENTATION CONTROLS (Floating Bar) -->
+    <div class="controls-bar">
+        <button id="prev-btn" class="control-btn" title="Diapositiva Anterior (Flecha Izquierda)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <div class="slide-indicator">
+            <span id="current-slide-num">1</span> / <span id="total-slides-num">14</span>
+        </div>
+        
+        <button id="next-btn" class="control-btn" title="Diapositiva Siguiente (Flecha Derecha / Espacio)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        
+        <div class="divider"></div>
+
+        <button id="autoplay-btn" class="control-btn" title="Autoplay (Reproducción Automática)">
+            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <svg id="pause-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+        </button>
+
+        <button id="fullscreen-btn" class="control-btn" title="Pantalla Completa (F)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+        </button>
+
+        <button id="print-mode-btn" class="control-btn" title="Modo Impresión / PDF (P)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        </button>
+    </div>
+
+    <!-- Slide Progress Bar -->
+    <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
