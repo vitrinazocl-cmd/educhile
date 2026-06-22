@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --primary: #005A9C;
@@ -119,6 +122,26 @@
             left: 100%;
         }
 
+        /* Social Icons */
+        .social-icons {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 1.5s ease-out 0.8s both;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: var(--secondary);
+        }
+
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -149,6 +172,14 @@
         
         <!-- Botón que redirige a la página principal -->
         <a href="clasesonline.html" class="btn-enter">ENTRAR</a>
+
+        <!-- Redes Sociales -->
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
     </div>
 
 </body>
