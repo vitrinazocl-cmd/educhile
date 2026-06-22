@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduChile - Home</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary: #005A9C;
+            --secondary: #FF9F1C;
+            --accent: #2EC4B6;
+            --bg-light: #F4F8FB;
+            --text-main: #334155;
+            --white: #FFFFFF;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+            overflow: hidden; /* Prevent scrolling, making it a splash screen */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Glassmorphism Background Decoration */
+        .bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.4;
+            border-radius: 50%;
+            z-index: 0;
+            top: -10%;
+            left: -10%;
+            animation: float 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(50px) scale(1.1); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        h1.slogan {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0px 4px 20px rgba(0, 90, 156, 0.2);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        /* Swiper Slider Styles */
+        .swiper-container {
+            width: 100%;
+            max-width: 900px;
+            height: 50vh;
+            min-height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            animation: zoomIn 1.2s ease-out;
+            position: relative;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1e293b;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 10s linear;
+        }
+
+        .swiper-slide-active img {
+            transform: scale(1.1); /* Slow zoom effect on active slide */
+        }
+
+        /* Enter Button Styles */
+        .btn-enter {
+            margin-top: 40px;
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Nunito', sans-serif;
+            color: var(--white);
+            background: var(--secondary);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 159, 28, 0.4);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.5s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-enter::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-enter:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 159, 28, 0.6);
+            background: #E88E14;
+        }
+
+        .btn-enter:hover::before {
+            left: 100%;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Swiper Custom Navigation */
+        .swiper-pagination-bullet {
+            background: var(--white);
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--accent);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <h1 class="slogan">Bienvenidos a la Educación del Futuro</h1>
+
+        <!-- Swiper -->
+        <div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="OIP.webp" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="OIP (1).webp" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="OIP (2).webp" alt="Slide 3"></div>
+                <div class="swiper-slide"><img src="OIP (3).webp" alt="Slide 4"></div>
+                <div class="swiper-slide"><img src="OIP (4).webp" alt="Slide 5"></div>
+                <div class="swiper-slide"><img src="OIP (5).webp" alt="Slide 6"></div>
+                <div class="swiper-slide"><img src="R.jpg" alt="Slide 7"></div>
+                <div class="swiper-slide"><img src="escuela-online.webp" alt="Slide 8"></div>
+                <div class="swiper-slide"><img src="imagencolegio1.jpg" alt="Slide 9"></div>
+                <div class="swiper-slide"><img src="istockphoto-1422130601-170667a.jpg" alt="Slide 10"></div>
+                <div class="swiper-slide"><img src="kozzi-cute_kid_is_sitting_on_laptop_in_beautiful_environment-2416x1572-768x500.jpg" alt="Slide 11"></div>
+                <div class="swiper-slide"><img src="buiness-live-streaming-vs-video-learning-which-should-you-choose-thumbnail.avif" alt="Slide 12"></div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next" style="color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
+            <div class="swiper-button-prev" style="color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
+        </div>
+
+        <a href="clasesonline.html" class="btn-enter">ENTRAR</a>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'fade', // Gives a nice premium fade transition between slides
+            fadeEffect: { crossFade: true },
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            grabCursor: true,
+        });
+    </script>
+</body>
+</html>

@@ -546,8 +546,10 @@
             <button class="nav-btn" onclick="ir('portales')">Portales</button>
             <button class="nav-btn" onclick="ir('ramos')">Asignaturas</button>
             <button class="nav-btn" onclick="ir('biblioteca')">Biblioteca</button>
+            <button class="nav-btn" style="color: var(--secondary); font-weight: 800;" onclick="ir('preuniversitario')">Pre Universitario</button>
             <button class="nav-btn" onclick="ir('apoyo')">Apoyo Escolar</button>
             <button class="nav-btn" onclick="ir('informe')">Toolkit</button>
+            <button class="nav-btn" style="color: #FF006E; font-weight: 800;" onclick="ir('socios')">Socios EduChile</button>
             <button class="nav-btn login-btn" onclick="login()"><i class="fa-regular fa-user"></i> Ingresar al Aula</button>
         </nav>
     </header>
@@ -708,6 +710,70 @@
             <!-- El contenido dinámico se generará aquí con JS -->
         </div>
 
+        <!-- PRE UNIVERSITARIO (PAES) -->
+        <div class="section-header" id="preuniversitario" style="margin-top: 40px;">
+            <h2>Pre Universitario PAES</h2>
+            <p>Prepárate para la Prueba de Acceso a la Educación Superior. Material exclusivo, ejercicios y ensayos para estudiantes de 1° a 4° Medio.</p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #E63946;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-pen-nib" style="font-size: 2rem; color: #E63946; margin-bottom: 15px;"></i>
+                    <h3>Competencia Lectora</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-graduation-cap"></i> 1° a 4° Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px;">Textos literarios y no literarios, vocabulario y estrategias de comprensión.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-primary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Iniciando Test de Comprensión Lectora...')"><i class="fa-solid fa-list-check"></i> Hacer Test</button>
+                        <button class="btn-secondary" style="margin: 0; padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Abriendo ejercicios de Comprensión Lectora...')"><i class="fa-solid fa-book-open"></i> Ejercicios</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #457B9D;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-square-root-variable" style="font-size: 2rem; color: #457B9D; margin-bottom: 15px;"></i>
+                    <h3>Competencia Matemática M1 y M2</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-graduation-cap"></i> 1° a 4° Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px;">Álgebra, geometría, probabilidad y resolución de problemas tipo PAES.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-primary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Iniciando Ensayo M1...')"><i class="fa-solid fa-list-check"></i> Hacer Test</button>
+                        <button class="btn-secondary" style="margin: 0; padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Abriendo material de Matemáticas...')"><i class="fa-solid fa-book-open"></i> Material</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #2A9D8F;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-atom" style="font-size: 2rem; color: #2A9D8F; margin-bottom: 15px;"></i>
+                    <h3>Ciencias (Biología, Física, Química)</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-graduation-cap"></i> 1° a 4° Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px;">Módulos común y electivo. Repasa los contenidos exigidos por el DEMRE.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-primary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Iniciando Test de Ciencias...')"><i class="fa-solid fa-list-check"></i> Hacer Test</button>
+                        <button class="btn-secondary" style="margin: 0; padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Abriendo ejercicios de Ciencias...')"><i class="fa-solid fa-book-open"></i> Ejercicios</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-color-bar" style="background: #E9C46A;"></div>
+                <div class="course-content">
+                    <i class="fa-solid fa-globe" style="font-size: 2rem; color: #E9C46A; margin-bottom: 15px;"></i>
+                    <h3>Historia y Cs. Sociales</h3>
+                    <div class="course-meta"><span><i class="fa-solid fa-graduation-cap"></i> 1° a 4° Medio</span></div>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px;">Historia de Chile y el Mundo, formación ciudadana y economía.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="btn-primary" style="padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Iniciando Ensayo de Historia...')"><i class="fa-solid fa-list-check"></i> Hacer Test</button>
+                        <button class="btn-secondary" style="margin: 0; padding: 8px 15px; font-size: 0.85rem;" onclick="alert('Abriendo material de Historia...')"><i class="fa-solid fa-book-open"></i> Material</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- APOYO PSICOLÓGICO -->
         <div class="support-box" id="apoyo">
             <h2>Portal de Apoyo y Convivencia Escolar</h2>
@@ -833,6 +899,53 @@
                     <div class="swiper-button-next" style="color:var(--primary);"></div>
                     <div class="swiper-button-prev" style="color:var(--primary);"></div>
                     <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIOS EDUCHILE -->
+        <div class="section-header" id="socios">
+            <h2>Socios EduChile</h2>
+            <p>Conviértete en un pilar fundamental de nuestra misión. Tu contribución, ya sea económica o en activos tecnológicos, nos permite llegar a más niños y niñas en situación de vulnerabilidad, acortando la brecha digital.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 80px; align-items: stretch;">
+            <div style="flex: 1; min-width: 300px; background: white; border-radius: 20px; padding: 40px; box-shadow: var(--shadow-soft); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-solid fa-hand-holding-dollar" style="font-size: 3rem; color: #FF9F1C;"></i>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); text-align: center;">Aporta con Dinero</h3>
+                <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6; text-align: center;">Las donaciones monetarias nos ayudan a pagar servidores, licencias y sueldos de los docentes que hacen que EduChile sea posible. ¡Cada peso cuenta!</p>
+                <div style="display: flex; gap: 10px; margin-bottom: 25px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-primary" style="padding: 10px 20px; font-size: 1rem;" onclick="alert('Iniciando donación de $10.000...')">$10.000</button>
+                    <button class="btn-primary" style="padding: 10px 20px; font-size: 1rem; background: var(--secondary);" onclick="alert('Iniciando donación de $20.000...')">$20.000</button>
+                    <button class="btn-secondary" style="padding: 10px 20px; font-size: 1rem; margin-left: 0;" onclick="alert('Iniciando donación de otro monto...')">Otro monto</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?q=80&w=800&auto=format&fit=crop" alt="Donación de dinero" style="width: 100%; border-radius: 12px; object-fit: cover; height: 200px;">
+            </div>
+
+            <div style="flex: 1; min-width: 300px; background: white; border-radius: 20px; padding: 40px; box-shadow: var(--shadow-soft); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-solid fa-laptop-medical" style="font-size: 3rem; color: var(--accent);"></i>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); text-align: center;">Aporta con Equipos</h3>
+                <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6; text-align: center;">Muchos estudiantes no cuentan con un dispositivo para conectarse. Recibimos equipos de segunda mano en buen estado para dárselos a familias que lo necesitan.</p>
+                <div style="text-align: center;">
+                    <button class="btn-secondary" style="margin-left: 0; margin-bottom: 25px; border-color: var(--accent); color: var(--accent);" onclick="alert('Formulario de donación de equipos abierto.')"><i class="fa-solid fa-laptop"></i> Donar Equipos</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800&auto=format&fit=crop" alt="Donación de computadores" style="width: 100%; border-radius: 12px; object-fit: cover; height: 200px;">
+            </div>
+        </div>
+        
+        <div style="background: white; border-radius: 20px; overflow: hidden; margin-bottom: 80px; box-shadow: var(--shadow-soft); display: flex; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 15px; color: var(--primary);">El impacto de tu donación</h3>
+                <p style="color: var(--text-light); margin-bottom: 30px; line-height: 1.6; font-size: 1.1rem;">"Gracias a los equipos donados por los Socios EduChile, mis hijos pudieron retomar sus clases luego de estar 6 meses sin estudiar debido a que no podíamos comprar un computador."</p>
+                <p style="font-weight: bold; color: var(--text-main);">— María, apoderada de Punta Arenas.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; position: relative; background: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop') center/cover; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.2);" onclick="alert('Reproduciendo video testimonial...')">
+                    <i class="fa-solid fa-play" style="font-size: 2rem; color: var(--secondary); margin-left: 5px;"></i>
                 </div>
             </div>
         </div>
