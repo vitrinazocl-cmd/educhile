@@ -531,6 +531,63 @@
                 border-bottom: none;
             }
         }
+
+        /* Modal Styles */
+        .modal-ppt {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-ppt-content {
+            background-color: #fff;
+            margin: 2vh auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 95%;
+            max-width: 1200px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .close-modal {
+            color: #aaa;
+            align-self: flex-end;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 10px;
+        }
+
+        .modal-actions h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -550,7 +607,7 @@
             <button class="nav-btn" onclick="ir('apoyo')">Apoyo Escolar</button>
             <button class="nav-btn" onclick="ir('informe')">Toolkit</button>
             <button class="nav-btn" style="color: #FF006E; font-weight: 800;" onclick="ir('socios')">Socios EduChile</button>
-            <button class="nav-btn" style="color: #005A9C; font-weight: 800;" onclick="window.open('EduChile%20-%20Plataforma%20para%20la%20Prevenci%C3%B3n%20de%20la%20Deserci%C3%B3n%20Escolar%20(1).pptx', '_blank')"><i class="fa-solid fa-file-powerpoint"></i> PPT</button>
+            <button class="nav-btn" style="color: #005A9C; font-weight: 800;" onclick="abrirModalPPT()"><i class="fa-solid fa-file-powerpoint"></i> PPT</button>
             <button class="nav-btn login-btn" onclick="login()"><i class="fa-regular fa-user"></i> Ingresar al Aula</button>
         </nav>
     </header>
@@ -1046,6 +1103,38 @@
                 },
             });
         });
+        // Funciones del Modal PPT
+        function abrirModalPPT() {
+            document.getElementById('modalPPT').style.display = 'block';
+        }
+
+        function cerrarModalPPT() {
+            document.getElementById('modalPPT').style.display = 'none';
+        }
+
+        // Cerrar modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById('modalPPT');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
+
+    <!-- MODAL PPT / PDF -->
+    <div id="modalPPT" class="modal-ppt">
+        <div class="modal-ppt-content">
+            <div class="modal-actions">
+                <h2>Presentación EduChile</h2>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <a href="EduChile%20-%20Plataforma%20para%20la%20Prevenci%C3%B3n%20de%20la%20Deserci%C3%B3n%20Escolar%20(1).pptx" class="btn-secondary" style="padding: 8px 16px; font-size: 0.9rem; text-decoration: none;" download><i class="fa-solid fa-download"></i> Descargar PPTX</a>
+                    <span class="close-modal" onclick="cerrarModalPPT()">&times;</span>
+                </div>
+            </div>
+            <!-- Embebemos el PDF convertido -->
+            <iframe src="EduChile%20-%20Plataforma%20para%20la%20Prevenci%C3%B3n%20de%20la%20Deserci%C3%B3n%20Escolar%20(1).pdf" style="width: 100%; height: 100%; border: none; flex: 1;"></iframe>
+        </div>
+    </div>
+
 </body>
 </html>
